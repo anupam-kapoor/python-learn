@@ -36,6 +36,11 @@ class TestPalindromeChecker(unittest.TestCase):
     def test_two_same_characters(self):
         """Test two identical characters"""
         self.assertTrue(is_palindrome("aa"))
+    
+    def test_palindrome_with_punctuation(self):
+        """Test palindromes containing punctuation"""
+        self.assertTrue(is_palindrome("A man, a plan, a canal: Panama!"))
+        self.assertTrue(is_palindrome("race, car!"))
 
 
 if __name__ == "__main__":

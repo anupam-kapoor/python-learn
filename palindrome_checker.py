@@ -16,6 +16,9 @@ def is_palindrome(text):
     # Remove spaces and convert to lowercase
     cleaned_text = text.replace(" ", "").lower()
     
+    # Remove punctuation for more accurate checking
+    cleaned_text = ''.join(char for char in cleaned_text if char.isalnum())
+    
     # Compare the text with its reverse
     is_palindrome_result = cleaned_text == cleaned_text[::-1]
     
